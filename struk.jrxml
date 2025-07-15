@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="212" pageHeight="566" columnWidth="172" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a8c1bb02-8be9-4afe-b776-4aa396dfeb08">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="idtransaksi" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * from tbdetailtransaksi a INNER JOIN tbmenu b INNER JOIN tbtransaksi c INNER JOIN tbmeja d INNER JOIN tbpelanggan e INNER JOIN tbpengguna f ON a.idmenu=b.idmenu and a.idtransaksi=c.idtransaksi and c.idmeja=d.idmeja and c.idpelanggan=e.idpelanggan and c.idpengguna=f.idpengguna where a.idtransaksi=$P{idtransaksi}]]>
+	</queryString>
+	<field name="iddetailtransaksi" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idtransaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idmenu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="harga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="totalharga" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namamenu" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kategori" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="stok" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idpengguna" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idpelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idmeja" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hargatotal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="bayar" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kembali" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nomormeja" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namapelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jk" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempatlahir" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggallahir" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nohp" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idpegawai" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namapengguna" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="username" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="23" y="29" width="131" height="20" uuid="d2b03a36-ddec-4a57-bc4f-e8bc7d69adc7"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Struk Pembayaran]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="41" y="59" width="100" height="20" uuid="8b45f03e-cd76-4d90-b0da-b8f67f838b29"/>
+				<textFieldExpression><![CDATA[$F{idtransaksi}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="78" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="15" width="82" height="20" uuid="a1a9e305-a78a-40c1-b29d-bc9b901dfaf5"/>
+				<textFieldExpression><![CDATA[$F{namapelanggan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="15" width="90" height="20" uuid="00ac589c-47e5-4d33-9208-9ab3a1d5b4fe"/>
+				<textFieldExpression><![CDATA[$F{namapengguna}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="35" width="100" height="20" uuid="9ce4052e-0ecb-4618-a89e-a9498d1f8c6b"/>
+				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="55" width="72" height="20" uuid="e03ab53c-fad2-4a71-abe5-609242220983"/>
+				<textFieldExpression><![CDATA[$F{nomormeja}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="13" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="58" height="20" uuid="d27c2f6f-18bd-4cd9-bc4d-99206ee17623"/>
+				<textFieldExpression><![CDATA[$F{namamenu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="58" y="0" width="24" height="20" uuid="e5acfa9b-e89d-44a8-ba1f-f92eb921c276"/>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="82" y="0" width="45" height="20" uuid="f408deae-da63-4579-a2e3-278b305e9661"/>
+				<textFieldExpression><![CDATA[$F{harga}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="127" y="0" width="45" height="20" uuid="60a3cb12-e189-48f4-b900-7dceb8261019"/>
+				<textFieldExpression><![CDATA[$F{hargatotal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="75" splitType="Stretch">
+			<textField>
+				<reportElement x="100" y="0" width="100" height="20" uuid="6cda3d18-e5e0-4fb4-83a7-93423224755f"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="20" width="100" height="20" uuid="27824f96-f4b9-4606-a4d3-28f29a1853a3"/>
+				<textFieldExpression><![CDATA[$F{bayar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="40" width="100" height="20" uuid="7d573bd2-01bb-4ba8-9c84-88fdc8315fff"/>
+				<textFieldExpression><![CDATA[$F{kembali}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="6d25f758-cc03-4385-a170-60f270df33fd"/>
+				<text><![CDATA[Total Bayar :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="20" width="100" height="20" uuid="c420ca75-dd06-46c6-9baf-ef03ab2bd655"/>
+				<text><![CDATA[Bayar :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="40" width="100" height="20" uuid="56de9444-fc65-41b7-9df3-c05c615f9242"/>
+				<text><![CDATA[Kembalian :]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
